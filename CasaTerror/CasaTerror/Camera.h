@@ -1,6 +1,6 @@
 #include "Main.h"
 
-#define CAMERASPEED	0.07f				// The Camera Speed
+#define CAMERASPEED	0.5f				// The Camera Speed
 //NEW//////////////////NEW//////////////////NEW//////////////////NEW////////////////
 
 
