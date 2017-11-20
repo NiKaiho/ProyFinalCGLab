@@ -367,7 +367,7 @@ void InitGL ( GLvoid )     // Inicializamos parametros
 	repisa.BuildGLTexture();
 	repisa.ReleaseImage();
 
-	agua.LoadTGA("texturas/agua2.tga");
+	agua.LoadTGA("texturas/aguaroja.tga");
 	agua.BuildGLTexture();
 	agua.ReleaseImage();
 
@@ -1056,7 +1056,7 @@ void fuente()
 	glTranslatef(1050, 473, 1060);
 	glScalef(0.5, 1.0, 1.0);
 	castillo();
-	glPopMatrix();//////// estas lineas hay que ponerlas despues no van aqui
+	glPopMatrix();///
 
 	glPushMatrix();
 	glDisable(GL_LIGHTING);
@@ -1475,7 +1475,7 @@ void fuente()
 	glDisable(GL_LIGHTING);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glBindTexture(GL_TEXTURE_2D, agua.GLindex);
+	glBindTexture(GL_TEXTURE_2D, agua.GLindex);/*++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	glBegin(GL_QUADS);
 	glColor3f(1.0, 1.0, 1.0);
 	glTexCoord2f(0.0, 0.0 - mov2); glVertex3f(1060, 552.1, 1045);
@@ -3075,7 +3075,6 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 
 
-		// LABORATORIO //
 
 
 
@@ -3816,8 +3815,8 @@ int main ( int argc, char** argv )   // Main Function
   glutIdleFunc		  ( animacion );
 
   //Música
-  PlaySound(NULL, NULL, 0);
-//  PlaySound("ProyectoCG.wav", NULL, SND_LOOP | SND_ASYNC);
+  //PlaySound(NULL, NULL, 0);
+  PlaySound(TEXT("audio.wav"), NULL, SND_LOOP||SND_SYNC );
 
   glutMainLoop        ( );          // 
 
