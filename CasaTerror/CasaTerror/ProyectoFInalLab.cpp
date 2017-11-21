@@ -2239,8 +2239,6 @@ void ventanal()
 
 }
 
-
-
 void muroscristal()
 {
 	//Muros
@@ -2263,7 +2261,7 @@ void muroscristal()
 	glTranslatef(-2.375, 5.25, 0.0);
 	fig1.prisma(10.0, 0.25, 0.25, metaloscuro.GLindex);
 	glPopMatrix();
-
+	
 	glPushMatrix();
 	glColor3f(1.0, 1.0, 1.0);
 	glEnable(GL_BLEND);//PARA TRANSPARENCIA
@@ -2336,7 +2334,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 		
 		
-					
+					/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 		//Piso skyblock
 		glPushMatrix();
@@ -2386,9 +2384,6 @@ void display ( void )   // Creamos la funcion donde se dibuja
 				glColor3f(1.0, 1.0, 1.0);
 				fig1.prisma(150, 534.8, 15, t_edif.GLindex);
 				//pared derecha
-				/*glTranslatef(259.9, 0.0, -294.7);
-				glColor3f(1.0, 0.0, 1.0);
-				fig1.prisma(150, 15, 574.4, 0);*/
 				glPushMatrix();
 					glTranslatef(-259.9, 0.0, -332.0);
 					glColor3f(1.0, 1.0, 1.0);
@@ -2790,7 +2785,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			glAlphaFunc(GL_GREATER, 0.1);
 			glColor3f(1.0, 1.0, 1.0);
 			glDisable(GL_LIGHTING);
-			glBindTexture(GL_TEXTURE_2D, pisolab.GLindex);
+			glBindTexture(GL_TEXTURE_2D, piedrita.GLindex);
 			glBegin(GL_QUADS);
 				glTexCoord2f(0.0, 0.0); glVertex3f(435.0, 178.0, 1117.0);
 				glTexCoord2f(1.0, 0.0); glVertex3f(435.0, 178.0, 535.0);
@@ -2877,7 +2872,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 		glPushMatrix();
 		//AQUI PONES LOS ELEMENTOS DEL CUARTO DE TORTURA SOLO FIJATE EN LOS GLTRANSLATE
-		glPopMatrix();
+			glPopMatrix();
 
         //División de Piso 
 		glPushMatrix();
@@ -3086,7 +3081,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			muropalomas();
 		glPopMatrix();
 
-		//Ventanales
+		//VENTANALES EXTERIORES
 		//Piso 1
 		glPushMatrix();
 			glTranslatef(938.0, 140.0, 1073.5);
@@ -3165,157 +3160,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			glEnable(GL_LIGHTING);
 		glPopMatrix();
 
-				//Muros con cristal
-				//Muros traseros
-		glPushMatrix();
-			glTranslatef(472.0, 426.0, 1023.0);
-			glScalef(12.0, 9.7, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(532.0, 426.0, 1023.0);
-			glScalef(12.0, 9.7, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(592.0, 426.0, 1023.0);
-			glScalef(12.0, 9.7, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(729.0, 426.0, 1032.0);
-			glScalef(12.0, 9.7, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(789.0, 426.0, 1032.0);
-			glScalef(12.0, 9.7, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(849.0, 426.0, 1032.0);
-			glScalef(12.0, 9.7, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(909.0, 426.0, 1032.0);
-			glScalef(12.0, 9.7, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-
-			//Muros frontales
-		glPushMatrix();
-			glTranslatef(895.0, 426.0, 542.0);
-			glScalef(17.0, 9.8, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(825.0, 426.0, 542.0);
-			glScalef(12.0, 9.8, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(765.0, 426.0, 542.0);
-			glScalef(12.0, 9.8, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(705.0, 426.0, 542.0);
-			glScalef(12.0, 9.8, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(645.0, 426.0, 542.0);
-			glScalef(12.0, 9.8, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(585.0, 426.0, 542.0);
-			glScalef(12.0, 9.8, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(525.0, 426.0, 542.0);
-			glScalef(12.0, 9.8, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(465.0, 426.0, 542.0);
-			glScalef(12.0, 9.8, 12.0);
-			muroscristal();
-		glPopMatrix();
-
-
-		//Muros laterales derechos
-		glPushMatrix();
-			glTranslatef(937.0, 426.0, 1000.0);
-			glScalef(12.0, 9.8, 12.0);
-			glRotatef(90.0, 0.0, 1.0, 0.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(937.0, 426.0, 940.0);
-			glScalef(12.0, 9.8, 12.0);
-			glRotatef(90.0, 0.0, 1.0, 0.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(937.0, 426.0, 880.0);
-			glScalef(12.0, 9.8, 12.0);
-			glRotatef(90.0, 0.0, 1.0, 0.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(937.0, 426.0, 820.0);
-			glScalef(12.0, 9.8, 12.0);
-			glRotatef(90.0, 0.0, 1.0, 0.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(937.0, 426.0, 760.0);
-			glScalef(12.0, 9.8, 12.0);
-			glRotatef(90.0, 0.0, 1.0, 0.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(937.0, 426.0, 700.0);
-			glScalef(12.0, 9.8, 12.0);
-			glRotatef(90.0, 0.0, 1.0, 0.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(937.0, 426.0, 640.0);
-			glScalef(12.0, 9.8, 12.0);
-			glRotatef(90.0, 0.0, 1.0, 0.0);
-			muroscristal();
-		glPopMatrix();
-
-		glPushMatrix();
-			glTranslatef(937.0, 426.0, 575.0);
-			glScalef(12.0, 9.8, 14.0);
-			glRotatef(90.0, 0.0, 1.0, 0.0);
-			muroscristal();
-		glPopMatrix();
+				
 
 
 		//Fuente
@@ -3328,8 +3173,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 		
 		
 
-	//Animación de lluvia
-		
+	
 
 		//Columpios
 		glPushMatrix();
